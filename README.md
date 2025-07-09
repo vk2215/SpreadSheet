@@ -1,69 +1,133 @@
-# React + TypeScript + Vite
+// README.md
+# 🧮 AI Spreadsheet Prototype - Intern Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Pixel-perfect React + TypeScript implementation of a spreadsheet-like interface based on the provided Figma design.
 
-Currently, two official plugins are available:
+### 🚀 Live Demo
+🔗 [View Deployed App](https://your-deployment-link.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📁 GitHub Repository
+🔗 [Visit Repo](https://github.com/your-username/your-repo-name)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Project Overview
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This assignment is a **frontend-only spreadsheet prototype** built using **React 18**, **TypeScript**, and **Tailwind CSS**, closely replicating the design provided in [Figma](https://www.figma.com/design/3nywpu5sz45RrCmwe68QZP/Intern-Design-Assigment?node-id=2-2535&t=DJGGMt8I4fiZjoIB-1).
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+It aims to simulate a **Google Sheets / Excel** experience with interactions, visual states, and responsive layout.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ Features
+
+- ⚡ Pixel-perfect UI based on Figma
+- 📊 Spreadsheet-style table using `react-table` (or custom minimal grid)
+- 🧭 Functional Tabs, Filters, Buttons (logging actions)
+- 🎨 Tailwind CSS utility-first styling
+- 🔍 Console logs for UI actions
+- 💻 ESLint & Prettier integrated
+- 🧪 TypeScript Strict Mode & Type Checks
+
+---
+
+## 💡 Optional Enhancements (Stretch Goals)
+
+- ⌨️ Keyboard navigation (arrow keys)
+- ↔️ Column resize & hide toggles
+
+---
+
+## 🛠 Tech Stack
+
+| Tech               | Description                         |
+|--------------------|-------------------------------------|
+| React 18           | Core UI Library                     |
+| TypeScript         | Static Typing (Strict Mode Enabled) |
+| Tailwind CSS       | Utility-first Styling               |
+| react-table        | Powerful Table Component            |
+| ESLint + Prettier  | Code Linting and Formatting         |
+| Vite / CRA         | Lightning-fast Frontend Tooling     |
+
+---
+
+## 🧪 Getting Started
+
+### 🔧 Installation
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🚴‍♂️ Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### 🧹 Lint & Type Check
+
+```bash
+npm run lint      # Check linting
+npm run type-check # Run TypeScript checks
+```
+
+---
+
+## 🔄 Folder Structure
+
+```bash
+├── public/
+├── src/
+│   ├── components/     # Reusable UI Components
+│   ├── data/           # Sample data / mock API
+│   ├── hooks/          # Custom React hooks (if needed)
+│   ├── utils/          # Helpers and utilities
+│   ├── App.tsx
+│   └── main.tsx
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
+## 📦 Trade-offs & Decisions
+
+- **No State Management Library**: Local state via `useState` and `useReducer` was sufficient.
+- **Table Implementation**: Used `react-table` for flexibility and performance unless otherwise mentioned.
+- **Pixel-Perfect**: Minor browser-specific pixel shifts may exist, but layout follows Figma as closely as possible.
+- **Stretch Goals**: Implemented only if time allowed without compromising code quality.
+
+---
+
+## 📸 Screenshots
+
+| 📋 Spreadsheet View | ⚙️ Tab/Filter UI |
+|---------------------|------------------|
+| ![Spreadsheet](./screenshots/spreadsheet.png) | ![Tabs](./screenshots/tabs.png) |
+
+---
+
+## 🧠 Learnings
+
+- Hands-on with `react-table`'s flexible API.
+- Improved pixel-perfect design practices with Tailwind.
+- Strengthened understanding of managing component state in TypeScript.
+- Linting, formatting, and build tooling with Vite.
+
+---
+
+## 🧑‍💻 Author
+
+**Vaishnavi Kale**  
+💼 Full Stack Developer | React & TypeScript Enthusiast  
+🔗 [Portfolio](#) | [LinkedIn](#) | [GitHub](#)
+
+---
+
+## 📜 License
+
+This project is open-source and free to use.
