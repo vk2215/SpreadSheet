@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles not easily done with Tailwind utilities can go here, but keep them minimal */
+/* For example, if you need a specific scrollbar style or a very complex gradient */
+
+/* Ensure full height for the app container */
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+
+/* Resizer styles for the main data table */
+.resizer {
+  position: absolute;
+  right: -2px; /* Adjusted to slightly overlap the border for better grabbing, or 0px to be exactly on it */
+  top: 0;
+  height: 100%;
+  width: 5px; /* Width of the draggable area */
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  z-index: 2; /* Ensure it's above other header content but allows border to show through */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease-in-out;
+  /* Optional: a subtle background to indicate it's there on hover, but typically not needed if it's small */
+  /* background: rgba(0, 0, 0, 0.1); */
+}
+
+/* Show resizer on hover over the header cell */
+th:hover > .resizer {
+  opacity: 1;
+}
+
+/* Visual feedback when actively resizing */
+.resizer.isResizing {
+  background: #3b82f6; /* Blue bar during resize */
+  opacity: 1;
+  width: 2px; /* Make it a thin bar when actively dragging */
+  right: 0; /* Align it precisely on the border when dragging */
+}
+
+/* Ensure the main table does not have collapsed borders */
+.spreadsheet-table {
+    border-collapse: separate;
+}
+
+/* Add a pseudo-element for a clear visible resize handle line */
+.resizer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; /* Align to the very right of the resizer's width */
+    height: 100%;
+    width: 1px; /* The actual visible line for the handle */
+    background: transparent; /* Initially transparent */
+}
+
+.resizer:hover::after {
+    background: rgba(0, 0, 0, 0.4); /* Darker line on hover */
+}
+
+.resizer.isResizing::after {
+    background: #3b82f6; /* Blue line when dragging */
+}
