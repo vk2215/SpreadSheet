@@ -24,7 +24,7 @@ import {
   XCircle,
   ChevronDown,
   MoreHorizontal,
-  ArrowUp,
+  //ArrowUp,
   EllipsisVertical,
   Briefcase,
   CalendarDays,
@@ -64,6 +64,7 @@ const SpreadsheetComponent: React.FC = () => {
         priority: "Low",
         dueDate: "",
         estValue: "",
+        type: "", 
       });
     }
     return emptyRows;

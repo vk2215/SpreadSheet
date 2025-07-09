@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Toolbar from './components/Toolbar';
+//import Toolbar from './components/Toolbar';
 import Spreadsheet from './components/Spreadsheet';
 //import { MOCK_DATA, JobRequest } from './types'; // Import mock data
 import { MOCK_DATA, type JobRequest } from "./types/types.ts";

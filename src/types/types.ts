@@ -64,7 +64,7 @@ export const MOCK_DATA: JobRequest[] = [
   },
   // Add more mock data as per your screenshot
 ];
-export interface JobRequest {
+export type JobRequest = {
   id: number;
   jobRequest: string;
   submitted: string; // Date string or Date object
@@ -75,5 +75,6 @@ export interface JobRequest {
   priority: 'High' | 'Medium' | 'Low';
   dueDate: string; // Date string or Date object
   estValue: string; 
-  type: 'data' | 'new-row';
+  type?: string;
+  //type: 'data' | 'new-row';
 }
