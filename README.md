@@ -4,10 +4,10 @@
 > Pixel-perfect React + TypeScript implementation of a spreadsheet-like interface based on the provided Figma design.
 
 ### 🚀 Live Demo
-🔗 [View Deployed App](https://your-deployment-link.com)
+🔗 [View Deployed App](https://vk2215.github.io/SpreadSheet/)
 
 ### 📁 GitHub Repository
-🔗 [Visit Repo](https://github.com/your-username/your-repo-name)
+🔗 [Visit Repo](https://github.com/vk2215/SpreadSheet)
 
 ---
 
@@ -124,7 +124,6 @@ npm run type-check # Run TypeScript checks
 
 **Vaishnavi Kale**  
 💼 Full Stack Developer | React & TypeScript Enthusiast  
-🔗 [Portfolio](#) | [LinkedIn](#) | [GitHub](#)
 
 ---
 
